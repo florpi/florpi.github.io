@@ -1,0 +1,196 @@
+html {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: larger;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: #1565c0;
+}
+
+a:hover {
+    color: #217ee7;
+}
+
+#content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) ;
+    text-align: center;
+    max-width: 520px;
+    padding: 32px;
+    line-height: 1.6em;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 150px;
+}
+
+.icons {
+    list-style-type: none;
+    font-size: xx-large;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 320px;
+    margin: 1em auto;
+}
+
+.icons li {
+    display: inline;
+    width: 42px;
+}
+
+.icons a {
+    color: black;
+}
+
+.icons a:hover {
+    color: #1565c0;
+}
+
+nav {
+    background-color: white;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    list-style-type: none;
+}
+
+h2 {
+    color: #333;
+    font-size: 26px;
+    padding: 4;
+    margin-left: 45px;
+}
+
+
+strong {
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none; /* This removes the bullet points */
+    padding: 2;
+    margin: 0;
+}
+
+.presentation-container {
+    border: 3px solid #ccc; /* Adds a border */
+    border-radius: 10px; /* Optional: rounds the corners of the border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+    padding: 15px; /* Adds space around the iframe */
+    margin: 20px auto; /* Centers the container and adds space above and below */
+    max-width: 600px; /* Sets a maximum width for the container */
+    background-color: #f9f9f9; /* Optional: adds a background color */
+}
+
+
+.iframe-container {
+    width: 800px;
+    height: 520px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.iframe-title {
+    text-align: center;
+    font-size: 20px;
+    margin-top: -10px; /* Adjust this value as needed */
+    margin-bottom: 10px;
+    /* Add more styling as needed */
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0; /* Adjust based on the height of the title */
+    left: 0;
+    width: 100%;
+    height: 100%; /* Adjust height to account for the title */
+    border: none;
+}
+
+.text-container {
+    text-align: center;
+}
+
+
+.timestamp {
+    display: inline-block;
+    padding: 2px 5px; /* Reduced padding */
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 12px; /* Reduced font size */
+    color: #7D70BA;
+    background-color: #DEC1FF;
+    border: 1px solid #7D70BA;
+    border-radius: 5px; /* Adjusted border radius */
+}
+
+.location {
+    display: inline-block;
+    padding: 2px 5px; /* Reduced padding */
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 12px; /* Reduced font size */
+    color: #7A8450;
+    background-color: #AEBD93;
+    border: 1px solid #7A8450;
+    border-radius: 5px; /* Adjusted border radius */
+}
+
+.news-item {
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Centers items vertically */
+    margin-left: 20px; /* Adds 20px margin on the left */
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.news-item p {
+    display: inline; /* Makes the paragraph inline with the timestamp */
+    margin: 0; /* Removes default margin */
+}
+
+.italic-text {
+    font-style: italic;
+}
