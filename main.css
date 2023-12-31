@@ -194,3 +194,29 @@ ul {
 .italic-text {
     font-style: italic;
 }
+@media screen and (max-width: 600px) {
+    body {
+        font-size: smaller;
+    }
+
+    .icons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .iframe-container {
+        width: 100%;
+        height: auto;
+    }
+
+    nav ul li {
+        float: none;
+        width: 100%;
+        text-align: left;
+    }
+
+    .presentation-container, .news-item {
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
