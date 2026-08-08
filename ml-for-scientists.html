@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Machine Learning for Scientists · Carolina Cuesta-Lazaro</title>
+    <meta name="description" content="PHYS-GA 2043 · Special Topics: Machine Learning for Scientists. Course information." />
+
+    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32" />
+    <link rel="stylesheet" href="main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+
+  <body class="course-page">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="papers.html">Papers</a></li>
+        <li><a href="talks.html">Talks</a></li>
+        <li><a href="teaching.html" class="active">Teaching</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="group.html">Group</a></li>
+        <li><a href="cv.pdf" target="_blank" rel="noopener">CV</a></li>
+      </ul>
+    </nav>
+
+    <main class="wrap">
+      <p class="backlink"><a href="teaching.html">&larr; Teaching</a></p>
+
+      <h1>Special Topics: Machine Learning for Scientists</h1>
+      <p class="course-code">PHYS-GA 2043</p>
+
+      <h2>Goals of the class</h2>
+      <p>
+        This course has four goals. <strong>First</strong>, that you experience some wonder:
+        <em>how can these methods possibly work?</em> And that you turn this wonder into
+        understanding, by deriving and implementing the core methods yourselves rather than
+        importing them. <strong>Second</strong>, that you begin to think like a machine learner,
+        not just a user of tools: to see modeling choices, inductive biases, and failure modes as
+        things you design. <strong>Third</strong>, that you can read current ML research papers
+        with confidence and healthy skepticism. And <strong>finally</strong>, that you can develop
+        interesting projects of your own at the intersection of machine learning and your field,
+        because that intersection is where the best ideas in both directions now come from.
+      </p>
+
+      <h2>Schedule</h2>
+      <p class="schedule-meta">Tue/Thu 4:00–5:15 pm · Fall 2026 · Dates subject to change.</p>
+      <div class="table-wrap">
+        <table class="schedule">
+          <thead>
+            <tr>
+              <th>Wk</th>
+              <th>Dates</th>
+              <th>Topics</th>
+              <th>Assignments</th>
+              <th>Readings</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="wk">0</td>
+              <td class="dates">Thu Sep 3</td>
+              <td>Awesome ML &middot; awesome ML in physics &middot; how to design a project</td>
+              <td><span class="due">Lab 1 out:</span> MLPs from scratch (numpy/jax) &middot; paper lists out</td>
+              <td class="reading">&mdash;</td>
+            </tr>
+            <tr>
+              <td class="wk">1</td>
+              <td class="dates">Sep 8, 10</td>
+              <td>Basics of neural networks, optimization, double descent</td>
+              <td>&mdash;</td>
+              <td class="reading"><details><summary>4 readings</summary><ul><li><a href="https://arxiv.org/abs/1812.11118">Belkin+ — Bias–variance reconciliation</a></li><li><a href="https://arxiv.org/abs/1912.02292">Nakkiran+ — Deep Double Descent</a></li><li><a href="https://arxiv.org/abs/2201.02177">Power+ — Grokking</a></li><li><a href="https://kellerjordan.github.io/posts/muon/">Jordan+ — Muon</a> · <a href="https://arxiv.org/abs/2502.16982">Liu+ — Muon is scalable</a></li></ul></details></td>
+            </tr>
+            <tr>
+              <td class="wk">2</td>
+              <td class="dates">Sep 15, 17</td>
+              <td>Inductive biases &amp; architectures: MLP, CNN, GNN, transformer</td>
+              <td><span class="due">Literature review due Thu Sep 17</span> &middot; <span class="due">Lab 2 out:</span> transformers from scratch (numpy/jax)</td>
+              <td class="reading"><details><summary>2 readings</summary><ul><li><a href="https://arxiv.org/abs/2104.13478">Bronstein+ — Geometric Deep Learning</a></li><li><a href="https://arxiv.org/abs/1706.03762">Vaswani+ — Attention Is All You Need</a></li></ul></details></td>
+            </tr>
+            <tr>
+              <td class="wk">3</td>
+              <td class="dates">Sep 22, 24</td>
+              <td>Build big or build smart? Equivariance, scaling laws</td>
+              <td>&mdash;</td>
+              <td class="reading"><details><summary>6 readings</summary><ul><li><a href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html">Sutton — The Bitter Lesson</a></li><li><a href="https://arxiv.org/abs/1602.07576">Cohen &amp; Welling — Group Equivariant CNNs</a></li><li><a href="https://arxiv.org/abs/1802.08219">Thomas+ — Tensor Field Networks</a></li><li><a href="https://arxiv.org/abs/2410.23179">Brehmer+ — Does equivariance matter at scale?</a></li><li><a href="https://www.nature.com/articles/s41586-021-03819-2">Jumper+ — AlphaFold</a> · <a href="https://www.nature.com/articles/s41586-024-07487-w">Abramson+ — AlphaFold 3</a></li><li><a href="https://arxiv.org/abs/2001.08361">Kaplan+ — Scaling Laws</a> · <a href="https://arxiv.org/abs/2203.15556">Hoffmann+ — Chinchilla</a></li></ul></details></td>
+            </tr>
+            <tr>
+              <td class="wk">4</td>
+              <td class="dates">Sep 29, Oct 1</td>
+              <td>Training recipes, hyperparameters, craft</td>
+              <td><span class="due">Lab 1 due Tue Sep 29</span> (peer review in class) &middot; <span class="due">Research proposal due Sun Oct 4</span></td>
+              <td class="reading"><details><summary>5 readings</summary><ul><li><a href="https://arxiv.org/abs/2301.00808">Liu+ — ConvNeXt V2</a></li><li><a href="https://arxiv.org/abs/2010.11929">Dosovitskiy+ — ViT</a></li><li><a href="https://arxiv.org/abs/2106.10270">Steiner+ — How to train your ViT</a></li><li><a href="https://arxiv.org/abs/2110.00476">Wightman+ — ResNet strikes back</a></li><li><a href="http://karpathy.github.io/2019/04/25/recipe/">Karpathy — Recipe for Training NNs</a> · <a href="https://github.com/google-research/tuning_playbook">Google — Tuning Playbook</a></li></ul></details></td>
+            </tr>
+            <tr>
+              <td class="wk">5</td>
+              <td class="dates">Oct 6, 8</td>
+              <td>Self-supervised learning, foundation models, anomaly detection</td>
+              <td><span class="due">Lab 2 due Thu Oct 8</span> (peer review in class) &middot; proposal peer review (async)</td>
+              <td class="reading"><details><summary>6 readings</summary><ul><li><a href="https://arxiv.org/abs/2510.17960">Parker+ — AION-1</a></li><li><a href="https://arxiv.org/abs/2103.00020">Radford+ — CLIP</a></li><li><a href="https://arxiv.org/abs/2104.14294">Caron+ — DINO</a> · <a href="https://arxiv.org/abs/2304.07193">Oquab+ — DINOv2</a></li><li><a href="https://arxiv.org/abs/2111.06377">He+ — Masked Autoencoders</a></li><li><a href="https://arxiv.org/abs/2002.05709">Chen+ — SimCLR</a></li><li><a href="https://arxiv.org/abs/2310.03024">Parker+ — AstroCLIP</a></li></ul></details></td>
+            </tr>
+            <tr>
+              <td class="wk">6</td>
+              <td class="dates">Oct 13, 15</td>
+              <td>Generative models: train / sample / likelihood</td>
+              <td><span class="due">Lab 3 out:</span> flow matching from scratch (torch/jax) &middot; Tue: proposal review discussion &middot; <span class="due">Thu: project pitches</span></td>
+              <td class="reading"><details><summary>5 readings</summary><ul><li><a href="https://arxiv.org/abs/1505.05770">Rezende &amp; Mohamed — Normalizing Flows</a></li><li><a href="https://arxiv.org/abs/1503.03585">Sohl-Dickstein+ — Nonequilibrium Thermodynamics</a></li><li><a href="https://arxiv.org/abs/2006.11239">Ho+ — DDPM</a></li><li><a href="https://arxiv.org/abs/2210.02747">Lipman+ — Flow Matching</a></li><li><a href="https://arxiv.org/abs/2302.00482">Tong+ — Minibatch OT CFM</a></li></ul></details></td>
+            </tr>
+            <tr>
+              <td class="wk">7</td>
+              <td class="dates">Oct 20, 22</td>
+              <td>Simulation-based inference, amortization</td>
+              <td><span class="due">Lab 4 out:</span> SBI &mdash; conditional flow matching + validation</td>
+              <td class="reading"><details><summary>3 readings</summary><ul><li><a href="https://arxiv.org/abs/1605.06376">Papamakarios &amp; Murray — Fast ε-free Inference</a></li><li><a href="https://arxiv.org/abs/2404.09636">Gloeckler+ — Simformer</a></li><li><a href="https://arxiv.org/abs/1911.01429">Cranmer+ — Frontier of SBI</a></li></ul></details></td>
+            </tr>
+            <tr>
+              <td class="wk">8</td>
+              <td class="dates">Oct 27, 29</td>
+              <td>Robust SBI: calibration, coverage, posterior predictive checks, misspecification</td>
+              <td><span class="due">Lab 3 due Thu Oct 29</span> (peer review in class) &middot; <span class="due">Money plot check due Fri Oct 30</span></td>
+              <td class="reading"><details><summary>3 readings</summary><ul><li><a href="https://arxiv.org/abs/1804.06788">Talts+ — Simulation-Based Calibration</a></li><li><a href="https://arxiv.org/abs/2302.03026">Lemos+ — TARP</a></li><li><a href="https://arxiv.org/abs/2403.02314">Jeffrey+ — DES Y3 SBI</a></li></ul></details></td>
+            </tr>
+            <tr>
+              <td class="wk">9</td>
+              <td class="dates">Nov 3, 5</td>
+              <td>Reinforcement learning</td>
+              <td><span class="due">Lab 5 out:</span> REINFORCE on lunar lander &middot; <span class="due">Lab 4 due Thu Nov 5</span> (peer review in class)</td>
+              <td class="reading"><details><summary>4 readings</summary><ul><li><a href="https://doi.org/10.1007/BF00992696">Williams — REINFORCE</a></li><li><a href="https://arxiv.org/abs/1312.5602">Mnih+ — Atari with Deep RL</a></li><li><a href="https://arxiv.org/abs/2504.13837">Yue+ — Does RL incentivize reasoning?</a> · <a href="https://arxiv.org/abs/2505.24864">Liu+ — ProRL</a></li><li><a href="https://arxiv.org/abs/2501.12948">DeepSeek-R1</a></li></ul></details></td>
+            </tr>
+            <tr>
+              <td class="wk">10</td>
+              <td class="dates">Nov 10, 12</td>
+              <td>From next-token prediction to ChatGPT</td>
+              <td>&mdash;</td>
+              <td class="reading"><details><summary>4 readings</summary><ul><li><a href="https://arxiv.org/abs/2508.06471">GLM-4.5 technical report</a></li><li><a href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf">Radford+ — GPT-2</a> · <a href="https://arxiv.org/abs/2005.14165">Brown+ — GPT-3</a></li><li><a href="https://arxiv.org/abs/2203.02155">Ouyang+ — InstructGPT</a></li><li><a href="https://www.jmlr.org/papers/v3/bengio03a.html">Bengio+ — Neural Probabilistic LM</a></li></ul></details></td>
+            </tr>
+            <tr>
+              <td class="wk">11</td>
+              <td class="dates">Nov 17, 19</td>
+              <td>Interpretability / AI safety</td>
+              <td>&mdash;</td>
+              <td class="reading"><details><summary>6 readings</summary><ul><li><a href="https://arxiv.org/abs/2202.05262">Meng+ — ROME</a></li><li><a href="https://transformer-circuits.pub/2022/toy_model/index.html">Elhage+ — Toy Models of Superposition</a></li><li><a href="https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html">Templeton+ — Scaling Monosemanticity</a></li><li><a href="https://arxiv.org/abs/2301.05217">Nanda+ — Progress measures for grokking</a></li><li><a href="https://arxiv.org/abs/2412.14093">Greenblatt+ — Alignment faking</a></li><li><a href="https://arxiv.org/abs/2206.07682">Wei+ — Emergent Abilities</a> · <a href="https://arxiv.org/abs/2304.15004">Schaeffer+ — Mirage?</a></li></ul></details></td>
+            </tr>
+            <tr class="special">
+              <td class="wk">12</td>
+              <td class="dates">Tue Nov 24</td>
+              <td>Progress check (no class Thu, Thanksgiving)</td>
+              <td><span class="due">Lab 5 due Tue Nov 24</span> (peer review in class) &middot; blockers round</td>
+              <td class="reading">&mdash;</td>
+            </tr>
+            <tr>
+              <td class="wk">13</td>
+              <td class="dates">Dec 1, 3</td>
+              <td>Can machines do science? Agents, test-time compute</td>
+              <td>&mdash;</td>
+              <td class="reading"><details><summary>7 readings</summary><ul><li><a href="https://arxiv.org/abs/2605.26087">Wiemann, Smith+ — DiscoverPhysics</a></li><li><a href="https://arxiv.org/abs/2510.26887">Villaescusa-Navarro+ — Denario</a></li><li><a href="https://arxiv.org/abs/2506.13131">Novikov+ — AlphaEvolve</a></li><li><a href="https://arxiv.org/abs/2511.02864">Georgiev+ — Mathematical exploration at scale</a></li><li><a href="https://www.nature.com/articles/s41586-023-06792-0">Boiko+ — Coscientist</a></li><li><a href="https://www.nature.com/articles/s41586-023-06734-w">Szymanski+ — A-Lab</a></li><li><a href="https://arxiv.org/abs/2408.06292">Lu+ — The AI Scientist</a></li></ul></details></td>
+            </tr>
+            <tr>
+              <td class="wk">14</td>
+              <td class="dates">Dec 8, 10</td>
+              <td>Buffer &middot; Thu: course synthesis</td>
+              <td>&mdash;</td>
+              <td class="reading">&mdash;</td>
+            </tr>
+            <tr class="special">
+              <td class="wk">&mdash;</td>
+              <td class="dates">Dec 16&ndash;22</td>
+              <td>Exam slot (assigned by registrar)</td>
+              <td><span class="due">Final presentations + report due</span></td>
+              <td class="reading">&mdash;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Assignments</h2>
+
+      <h3 class="subhead">Labs</h3>
+      <p>
+        Five labs, done either individually or in pairs, each implementing a core method from
+        scratch. Each lab is due the day of its in-class peer review (see the schedule above).
+      </p>
+      <ul class="bullets">
+        <li><strong>Lab 1: MLPs from scratch (numpy/jax).</strong> Build an MLP and implement
+          backprop yourself. Teaches what training is.</li>
+        <li><strong>Lab 2: Transformers from scratch (numpy/jax).</strong> Implement attention,
+          build a small transformer.</li>
+        <li><strong>Lab 3: Flow matching from scratch (torch/jax).</strong> Regress a vector field
+          on 2D toy data, sample by integrating an ODE, evaluate exact likelihoods.</li>
+        <li><strong>Lab 4: Simulation-based inference (torch/jax).</strong> Condition your Lab 3
+          flow on observations: neural posterior estimation. Validate your model with predictive
+          checks, calibration, and coverage, including a deliberately broken setup you must catch
+          from the diagnostics alone.</li>
+        <li><strong>Lab 5: Reinforcement learning (torch/jax).</strong> Implement REINFORCE, land a
+          lunar lander.</li>
+      </ul>
+
+      <h3 class="subhead">Peer review</h3>
+      <p>Each lab is reviewed in class by another pair; submit before class. Answer:</p>
+      <ul class="bullets">
+        <li>What did they do that's interesting or clever?</li>
+        <li>Where did they choose differently than you, and why do you think?</li>
+        <li>What's one thing you don't understand about their code?</li>
+        <li>Can you find a way to break it?</li>
+      </ul>
+
+      <h3 class="subhead">Project</h3>
+      <p>
+        The goal of the course project is to produce a piece of original research at the
+        intersection of machine learning and physics, the kind of work you could submit to a
+        NeurIPS workshop. The final deliverable is a 4-page paper in NeurIPS workshop format
+        (references excluded), presented at the end of the semester. You'll get there through four
+        checkpoints:
+      </p>
+      <ul class="bullets">
+        <li><strong>Literature review (due Thu Sep 17).</strong> Curate a list of papers in your
+          area of interest: what they did, what surprised you, and what you would ask next. Form
+          your team.</li>
+        <li><strong>Research proposal (due Sun Oct 4).</strong> At most two pages (shorter is fine):
+          your question in one sentence, why your subfield cares, the data or simulator you can
+          actually touch, the method, and a plan for the remaining weeks. Proposals are peer-reviewed
+          by another team the following week, and you pitch the revised plan to the class on Thu
+          Oct 15.</li>
+        <li><strong>Money plot check (due Fri Oct 30).</strong> A short mid-project report: your
+          question in one sentence (has it changed?), a sketch of your money plot, the version you
+          hope for and the version you fear (drawn is fine; the concept is what matters), one real
+          plot from actual data, however ugly, your main blocker, and your plan B.</li>
+        <li><strong>Final presentations &amp; report (exam slot, Dec 16–22).</strong> Present the
+          project, with the October sketch next to the final result, and hand in the 4-page paper
+          the same day.</li>
+      </ul>
+
+      <h2>Resources for the literature review</h2>
+      <p>A personal, non-exhaustive starting point, heavily biased toward astrophysics and cosmology. It is meant to be inspirational.</p>
+      <p>To find work in your own area, browse past editions of two workshops:</p>
+      <ul class="bullets">
+        <li><strong>Machine Learning and the Physical Sciences</strong> (NeurIPS): <a href="https://ml4physicalsciences.github.io/2025/">2025</a> · <a href="https://ml4physicalsciences.github.io/2024/">2024</a> · <a href="https://ml4physicalsciences.github.io/2023/">2023</a> · <a href="https://ml4physicalsciences.github.io/2022/">2022</a> · <a href="https://ml4physicalsciences.github.io/2021/">2021</a> · <a href="https://ml4physicalsciences.github.io/">all editions</a></li>
+        <li><strong>AI for Science</strong> (NeurIPS &amp; ICML): <a href="https://ai4sciencecommunity.github.io/">all editions</a></li>
+      </ul>
+      <details class="litarea">
+        <summary>Astrophysics, Cosmology &amp; Gravitational Waves — 20 papers</summary>
+        <div class="rg-sub">Galaxies, surveys &amp; foundation models</div>
+        <ul class="litlist"><li><a href="https://arxiv.org/abs/2510.17960">Parker+ — AION-1</a></li><li><a href="https://arxiv.org/abs/2310.03024">Parker+ — AstroCLIP</a></li><li><a href="https://arxiv.org/abs/2110.00023">Stein+ — Self-supervised learning on Legacy Survey images</a></li><li><a href="https://arxiv.org/abs/2604.09787">Learning What's Real — signal vs. measurement artifacts</a></li></ul>
+        <div class="rg-sub">Cosmological inference &amp; emulation</div>
+        <ul class="litlist"><li><a href="https://arxiv.org/abs/2310.15256">Lemos+ — SimBIG: field-level SBI of galaxy clustering</a></li><li><a href="https://ml4physicalsciences.github.io/2024/files/NeurIPS_ML4PS_2024_162.pdf">Cuesta-Lazaro, Bayer, Albergo+ — Joint inference with stochastic interpolants</a></li><li><a href="https://arxiv.org/abs/2202.05282">TRENF — translation-invariant normalizing flow</a></li><li><a href="https://arxiv.org/abs/2305.11241">Jeffrey &amp; Wandelt — Evidence Networks</a></li><li><a href="https://arxiv.org/abs/2408.07699">Jamieson+ — Field-level emulation of structure formation</a></li><li><a href="https://arxiv.org/abs/2404.14487">Wagner-Carena+ — Sequential NPE for lens substructure</a></li><li><a href="https://arxiv.org/abs/2110.06931">Mishra-Sharma &amp; Cranmer — Neural SBI for the Galactic Center excess</a></li></ul>
+        <div class="rg-sub">Gravitational waves</div>
+        <ul class="litlist"><li><a href="https://arxiv.org/abs/2410.19956">Score-based likelihood for GW parameter estimation</a></li><li><a href="https://arxiv.org/abs/2106.12594">Dax+ — DINGO: real-time GW inference</a></li><li><a href="https://arxiv.org/abs/2210.05686">Dax+ — Neural importance sampling for GW inference</a></li></ul>
+        <div class="rg-sub">Stars, streams &amp; transients</div>
+        <ul class="litlist"><li><a href="https://arxiv.org/abs/2512.04600">Viterbo &amp; Buck — Tidal stellar streams (GD-1) with flow matching</a></li><li><a href="https://arxiv.org/abs/2510.14202">Perez Vidal, Gagliano &amp; Cuesta-Lazaro — Hierarchical SBI of supernova power sources</a></li><li><a href="https://arxiv.org/abs/1501.07604">Ness+ — The Cannon</a></li><li><a href="https://arxiv.org/abs/1708.08842">Hezaveh+ — Fast strong-lens analysis with CNNs</a></li></ul>
+        <div class="rg-sub">Discovery &amp; symbolic</div>
+        <ul class="litlist"><li><a href="https://arxiv.org/abs/2202.02306">Lemos+ — Rediscovering orbital mechanics with ML</a></li><li><a href="https://arxiv.org/abs/2006.11287">Cranmer+ — Discovering symbolic models with inductive biases</a></li></ul>
+      </details>
+      <details class="litarea">
+        <summary>Condensed Matter &amp; Quantum Many-Body — 6 papers</summary>
+        <ul class="litlist"><li><a href="https://arxiv.org/abs/1606.02318">Carleo &amp; Troyer — Neural quantum states</a></li><li><a href="https://arxiv.org/abs/1605.01735">Carrasquilla &amp; Melko — Machine learning phases of matter</a></li><li><a href="https://arxiv.org/abs/1610.02048">van Nieuwenburg+ — Learning phase transitions by confusion</a></li><li><a href="https://arxiv.org/abs/1909.02487">Pfau+ — FermiNet</a></li><li><a href="https://arxiv.org/abs/2101.03164">Batzner+ — NequIP: E(3)-equivariant interatomic potentials</a></li><li><a href="https://scholar.google.com/scholar?q=GNoME+scaling+deep+learning+for+materials+discovery+Merchant">Merchant+ — GNoME (Nature 2023)</a></li></ul>
+      </details>
+      <details class="litarea">
+        <summary>Biophysics — 4 papers</summary>
+        <ul class="litlist"><li><a href="https://scholar.google.com/scholar?q=ESMFold+evolutionary-scale+prediction+protein+structure+Lin">Lin+ — ESMFold (Science 2023)</a></li><li><a href="https://scholar.google.com/scholar?q=RFdiffusion+de+novo+design+protein+structure+Watson">Watson+ — RFdiffusion (Nature 2023)</a></li><li><a href="https://scholar.google.com/scholar?q=CryoDRGN+reconstruction+heterogeneous+cryo-EM+Zhong">Zhong+ — CryoDRGN (Nature Methods 2021)</a></li><li><a href="https://scholar.google.com/scholar?q=Evo+genomic+foundation+model+DNA+Nguyen">Nguyen+ — Evo (Science 2024)</a></li></ul>
+      </details>
+      <details class="litarea">
+        <summary>Particle Physics — 13 papers</summary>
+        <ul class="litlist"><li><a href="https://ml4physicalsciences.github.io/2025/">Hao+ — RINO: renormalization-group invariance with no labels (ML4PS 2025 spotlight)</a></li><li><a href="https://ml4physicalsciences.github.io/2025/">Kržmanc+ — IRC-safe jet clustering with geometric algebra transformers (ML4PS 2025)</a></li><li><a href="https://arxiv.org/abs/1902.02346">Komiske, Metodiev &amp; Thaler — The metric space of collider events</a></li><li><a href="https://arxiv.org/abs/1708.02949">Metodiev, Nachman &amp; Thaler — Classification without labels (CWoLa)</a></li><li><a href="https://arxiv.org/abs/2003.06413">Kanwar+ — Equivariant flow-based sampling for lattice gauge theory</a></li><li><a href="https://arxiv.org/abs/1805.00013">Brehmer, Cranmer, Louppe &amp; Pavez — Constraining EFTs with machine learning</a></li><li><a href="https://arxiv.org/abs/1907.10621">Brehmer, Kling, Espejo &amp; Cranmer — MadMiner</a></li><li><a href="https://arxiv.org/abs/2010.06439">Brehmer &amp; Cranmer — SBI methods for particle physics</a></li><li><a href="https://arxiv.org/abs/1402.4735">Baldi, Sadowski &amp; Whiteson — Searching for exotic particles with deep learning</a></li><li><a href="https://arxiv.org/abs/2202.03772">Qu+ — Particle Transformer</a></li><li><a href="https://arxiv.org/abs/2101.08320">Kasieczka+ — The LHC Olympics 2020</a></li><li><a href="https://arxiv.org/abs/1911.09107">Andreassen+ — OmniFold</a></li><li><a href="https://arxiv.org/abs/1705.02355">Paganini+ — CaloGAN</a></li></ul>
+      </details>
+      <details class="litarea">
+        <summary>Experimental &amp; Control — 4 papers</summary>
+        <ul class="litlist"><li><a href="https://scholar.google.com/scholar?q=Degrave+magnetic+control+tokamak+plasmas+deep+reinforcement+learning">Degrave+ — Magnetic control of tokamak plasmas with deep RL (Nature 2022)</a></li><li><a href="https://arxiv.org/abs/2509.14016">Buchli, Tracey+ — Deep Loop Shaping (DeepMind + LIGO)</a></li><li><a href="https://scholar.google.com/scholar?q=AlphaQubit+accurate+quantum+error+decoding+Google+Quantum+AI">Google Quantum AI — AlphaQubit (Nature 2024)</a></li><li><a href="https://ml4physicalsciences.github.io/2025/">Rajput, Schram+ — Continual learning for particle accelerators (ML4PS 2025 spotlight)</a></li></ul>
+      </details>
+      <details class="litarea">
+        <summary>Dynamics, Fluids &amp; Simulation — 7 papers</summary>
+        <ul class="litlist"><li><a href="https://arxiv.org/abs/2002.09405">Sanchez-Gonzalez+ — Learning to simulate complex physics with graph networks</a></li><li><a href="https://arxiv.org/abs/2102.01010">Kochkov+ — Machine-learning-accelerated CFD</a></li><li><a href="https://scholar.google.com/scholar?q=Ling+Kurzawski+Templeton+Reynolds-averaged+turbulence+deep+learning+invariance">Ling, Kurzawski &amp; Templeton — RANS turbulence with embedded invariance (JFM 2016)</a></li><li><a href="https://arxiv.org/abs/1804.00183">Duraisamy, Iaccarino &amp; Xiao — Turbulence modeling in the age of data</a></li><li><a href="https://arxiv.org/abs/1808.04930">Bar-Sinai+ — Learning data-driven discretizations for PDEs (PNAS 2019)</a></li><li><a href="https://scholar.google.com/scholar?q=Novati+automating+turbulence+modelling+multi-agent+reinforcement+learning">Novati+ — Automating turbulence modelling by multi-agent RL (Nat. Mach. Intell. 2021)</a></li><li><a href="https://scholar.google.com/scholar?q=Zanna+Bolton+data-driven+equation+discovery+ocean+mesoscale+closures">Zanna &amp; Bolton — Data-driven discovery of ocean mesoscale closures (GRL 2020)</a></li></ul>
+      </details>
+    </main>
+  </body>
+</html>

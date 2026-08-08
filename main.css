@@ -1,221 +1,422 @@
+/* ---------------------------------------------------------------------------
+   Carolina Cuesta-Lazaro — personal website
+   Elegant, minimal styling
+--------------------------------------------------------------------------- */
+
+:root {
+  --ink:        #1a1a1a;   /* main text            */
+  --muted:      #6b6b6b;   /* secondary text       */
+  --faint:      #9a9a9a;   /* years, meta          */
+  --accent:     #7a5c3e;   /* warm, understated    */
+  --accent-hov: #a07a52;
+  --rule:       #e6e3dd;   /* hairline dividers    */
+  --bg:         #fbfaf8;   /* soft off-white       */
+  --measure:    680px;
+}
+
+* { box-sizing: border-box; }
+
 html {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: larger;
-    font-weight: 300;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-a {
-    text-decoration: none;
-    color: #1565c0;
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  line-height: 1.7;
 }
 
-a:hover {
-    color: #217ee7;
+/* ---- Layout ------------------------------------------------------------- */
+
+.wrap {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 28px 96px;
 }
 
-#content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%) ;
-    text-align: center;
-    max-width: 520px;
-    padding: 32px;
-    line-height: 1.6em;
-}
-
-.avatar {
-    border-radius: 50%;
-    width: 150px;
-}
-
-.icons {
-    list-style-type: none;
-    font-size: xx-large;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    max-width: 320px;
-    margin: 1em auto;
-}
-
-.icons li {
-    display: inline;
-    width: 42px;
-}
-
-.icons a {
-    color: black;
-}
-
-.icons a:hover {
-    color: #1565c0;
-}
+/* ---- Navigation -------------------------------------------------------- */
 
 nav {
-    background-color: white;
-    overflow: hidden;
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 32px 28px 24px;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
 }
 
-nav ul li {
-    float: left;
+nav a {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-nav ul li a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
+nav a:hover,
+nav a.active {
+  color: var(--ink);
+  border-color: var(--accent);
 }
 
-nav ul li a:hover {
-    color: gray;
-    text-decoration: underline;
-}
+/* ---- Typography -------------------------------------------------------- */
 
-
-
-body {
-    line-height: 1.6;
-    list-style-type: none;
+h1 {
+  font-weight: 500;
+  font-size: 2.1rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.6em;
 }
 
 h2 {
-    color: #333;
-    font-size: 26px;
-    padding: 4;
-    margin-left: 45px;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin: 3em 0 1.2em;
+  padding-bottom: 0.6em;
+  border-bottom: 1px solid var(--rule);
 }
 
+p { margin: 0 0 1.1em; }
 
-strong {
-    font-weight: bold;
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(122, 92, 62, 0.28);
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-ul {
-    list-style-type: none; /* This removes the bullet points */
-    padding: 2;
-    margin: 0;
+a:hover {
+  color: var(--accent-hov);
+  border-color: var(--accent-hov);
 }
 
-.presentation-container {
-    border: 3px solid #ccc; /* Adds a border */
-    border-radius: 10px; /* Optional: rounds the corners of the border */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
-    padding: 15px; /* Adds space around the iframe */
-    margin: 20px auto; /* Centers the container and adds space above and below */
-    max-width: 600px; /* Sets a maximum width for the container */
-    background-color: #f9f9f9; /* Optional: adds a background color */
+/* ---- Home -------------------------------------------------------------- */
+
+.intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-top: 8px;
 }
 
-
-.iframe-container {
-    width: 800px;
-    height: 520px;
-    margin: 20px auto;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
-    position: relative;
+.avatar {
+  border-radius: 50%;
+  width: 132px;
+  height: 132px;
+  object-fit: cover;
+  flex-shrink: 0;
+  filter: grayscale(8%);
 }
 
-.iframe-title {
-    text-align: center;
-    font-size: 20px;
-    margin-top: -10px; /* Adjust this value as needed */
-    margin-bottom: 10px;
-    /* Add more styling as needed */
+.intro-text { flex: 1; }
+.intro-text h1 { margin-top: -0.1em; }
+.lead { color: var(--ink); }
+
+/* ---- Social icons ------------------------------------------------------ */
+
+.icons {
+  list-style: none;
+  display: flex;
+  gap: 26px;
+  padding: 0;
+  margin: 1.6em 0 0;
+  font-size: 1.35rem;
 }
 
-.iframe-container iframe {
-    position: absolute;
-    top: 0; /* Adjust based on the height of the title */
-    left: 0;
-    width: 100%;
-    height: 100%; /* Adjust height to account for the title */
-    border: none;
+.icons a {
+  color: var(--muted);
+  border: none;
 }
 
-.text-container {
-    text-align: center;
+.icons a:hover { color: var(--accent); }
+
+/* ---- Publications ------------------------------------------------------ */
+
+.pub-year {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: var(--faint);
+  margin: 2.4em 0 1em;
 }
 
-
-.timestamp {
-    display: inline-block;
-    padding: 2px 5px; /* Reduced padding */
-    margin-right: 10px;
-    font-weight: bold;
-    font-size: 12px; /* Reduced font size */
-    color: #7D70BA;
-    background-color: #DEC1FF;
-    border: 1px solid #7D70BA;
-    border-radius: 5px; /* Adjusted border radius */
+.pub {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin: 0 0 1.9em;
 }
 
-.location {
-    display: inline-block;
-    padding: 2px 5px; /* Reduced padding */
-    margin-right: 10px;
-    font-weight: bold;
-    font-size: 12px; /* Reduced font size */
-    color: #7A8450;
-    background-color: #AEBD93;
-    border: 1px solid #7A8450;
-    border-radius: 5px; /* Adjusted border radius */
+.pub-thumb {
+  flex: 0 0 132px;
+  width: 132px;
+}
+.pub-thumb img {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: #fff;
 }
 
-.news-item {
-    display: flex; /* Enables flexbox */
-    align-items: center; /* Centers items vertically */
-    margin-left: 20px; /* Adds 20px margin on the left */
-    margin-bottom: 10px;
-    margin-top: 20px;
+.pub-body { flex: 1; min-width: 0; }
+
+.pub .title {
+  color: var(--ink);
+  font-weight: 500;
+}
+a.title { border-bottom-color: rgba(26, 26, 26, 0.18); }
+a.title:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+.pub .authors {
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
-.news-item p {
-    display: inline; /* Makes the paragraph inline with the timestamp */
-    margin: 0; /* Removes default margin */
+.pub .me { color: inherit; font-weight: 400; }
+
+.pub .venue {
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
-.italic-text {
-    font-style: italic;
+.pub-links {
+  margin-top: 0.4em;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.82rem;
 }
-@media screen and (max-width: 600px) {
-    body {
-        font-size: smaller;
-    }
 
-    .icons {
-        flex-direction: column;
-        width: 100%;
-    }
+.pub-links a {
+  color: var(--accent);
+  border: none;
+  margin-right: 1.1em;
+  white-space: nowrap;
+}
+.pub-links a:hover { color: var(--accent-hov); }
 
-    .iframe-container {
-        width: 100%;
-        height: auto;
-    }
+/* ---- Talks & Teaching -------------------------------------------------- */
 
-    nav ul li {
-        float: none;
-        width: 100%;
-        text-align: left;
-    }
+.entry {
+  display: flex;
+  gap: 18px;
+  align-items: baseline;
+  margin: 0 0 0.4em;
+}
 
-    .presentation-container, .news-item {
-        max-width: 100%;
-        margin-left: 0;
-    }
+.entry .year {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.78rem;
+  color: var(--faint);
+  flex-shrink: 0;
+  width: 3.2em;
+}
+
+.entry .body .place {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.entry .body .desc { font-style: italic; }
+
+.slides {
+  margin: 14px 0 40px 0;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: #fff;
+}
+
+.slides iframe { width: 100%; height: 100%; border: none; display: block; }
+
+.course {
+  margin: 0 0 2.4em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid var(--rule);
+}
+.course:last-child { border-bottom: none; }
+
+.course h3 {
+  font-weight: 500;
+  font-size: 1.35rem;
+  margin: 0 0 0.15em;
+}
+.course h3 a { color: var(--ink); border-bottom: none; }
+.course h3 a:hover { color: var(--accent); }
+
+.course-more {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.82rem;
+  margin-top: 0.6em;
+}
+
+.table-wrap { overflow-x: auto; margin: 1.2em 0 2.4em; }
+
+.schedule {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+.schedule th, .schedule td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.6em 0.8em;
+  border-bottom: 1px solid var(--rule);
+}
+.schedule th {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+  font-weight: 600;
+  border-bottom: 1px solid var(--ink);
+}
+.schedule td.wk, .schedule td.dates {
+  white-space: nowrap;
+  color: var(--muted);
+}
+.schedule .due { font-weight: 600; color: var(--ink); }
+.schedule tr.special td { background: #f3efe8; }
+
+.schedule-meta {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.subhead {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin: 1.8em 0 0.5em;
+}
+
+/* Wider layout just for the course page (5-column schedule) */
+body.course-page nav,
+body.course-page .wrap { max-width: 900px; }
+
+.schedule details > summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.78rem;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.schedule details > summary::-webkit-details-marker { display: none; }
+.schedule details > summary::after { content: " ▾"; color: var(--faint); }
+.schedule details[open] > summary::after { content: " ▴"; }
+.schedule td.reading ul {
+  list-style: none;
+  margin: 0.5em 0 0;
+  padding: 0;
+  max-width: 17rem;
+  font-size: 0.85rem;
+}
+.schedule td.reading li { margin: 0 0 0.45em; line-height: 1.35; }
+.schedule td.reading a { border: none; }
+
+/* Literature-review resource lists */
+.litarea > summary {
+  cursor: pointer;
+  list-style: none;
+  font-weight: 500;
+  font-size: 1.15rem;
+  margin: 1.1em 0 0.2em;
+}
+.litarea > summary::-webkit-details-marker { display: none; }
+.litarea > summary::after { content: " ▾"; color: var(--faint); font-size: 0.85rem; }
+.litarea[open] > summary::after { content: " ▴"; }
+.litarea .rg-sub {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin: 1.1em 0 0.4em;
+}
+.litlist {
+  list-style: none;
+  margin: 0 0 0.5em;
+  padding: 0;
+  font-size: 0.92rem;
+}
+.litlist li { margin: 0 0 0.4em; line-height: 1.4; }
+.litlist a { border: none; }
+
+.backlink {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.82rem;
+  margin-bottom: 2em;
+}
+.backlink a { color: var(--muted); border: none; }
+.backlink a:hover { color: var(--accent); }
+
+.course-code {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin: -0.3em 0 2em;
+}
+
+.bullets {
+  list-style: disc;
+  padding-left: 1.2em;
+  margin: 0 0 1.3em;
+}
+.bullets li { margin: 0 0 0.55em; }
+
+.course .meta {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--faint);
+  text-transform: uppercase;
+  margin-bottom: 0.9em;
+}
+
+/* ---- Responsive -------------------------------------------------------- */
+
+@media screen and (max-width: 620px) {
+  html { font-size: 17px; }
+
+  .intro { flex-direction: column; align-items: center; text-align: center; }
+  .avatar { width: 120px; height: 120px; }
+  .icons { justify-content: center; }
+
+  nav ul { gap: 18px; }
+
+  .entry { flex-direction: column; gap: 2px; }
+  .entry .year { width: auto; }
+
+  .pub { flex-direction: column; gap: 10px; }
+  .pub-thumb { flex-basis: auto; width: 100%; max-width: 240px; }
 }
